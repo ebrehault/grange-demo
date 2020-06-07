@@ -5,6 +5,7 @@ import { TraversalModule } from 'angular-traversal';
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
+import { ButtonModule } from '@guillotinaweb/pastanaga-angular';
 
 @NgModule({
     declarations: [
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
         GrangeRootModule.forRoot(),
         StoreModule.forRoot({}),
         TraversalModule,
+        ButtonModule,
     ],
     providers: [
         {
@@ -22,6 +24,7 @@ import { AppComponent } from './app.component';
             useValue: {
                 BACKEND_URL: 'http://127.0.0.1:8081/db/site',
                 CLIENT_TIMEOUT: 5000,
+                LOGO: 'assets/logo.svg',
             },
         },
     ],
