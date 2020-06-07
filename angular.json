@@ -25,12 +25,23 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@guillotinaweb/pastanaga-angular/lib/assets",
+                "output": "assets"
+              }
             ],
             "styles": [
+              "src/pastanaga.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules/@guillotinaweb/pastanaga-angular/lib/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -123,6 +134,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "grange-demo"
 }

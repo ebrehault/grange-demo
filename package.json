@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "guillotina": "docker-compose -f g-api/docker-compose.yaml up"
   },
   "private": true,
   "dependencies": {
@@ -19,9 +20,25 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "@guillotinaweb/grange-schematic": "^1.0.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "@guillotinaweb/grange": "latest",
+    "@guillotinaweb/grange-core": "latest",
+    "@guillotinaweb/grange-form": "latest",
+    "@guillotinaweb/ngx-state-traverser": "latest",
+    "@guillotinaweb/pastanaga-angular": "latest",
+    "angular-traversal": "latest",
+    "ngx-schema-form": "latest",
+    "@angular/cdk": "^9.1.0",
+    "@ngrx/core": "1.2.0",
+    "@ngrx/effects": "8.6.0",
+    "@ngrx/store": "8.6.0",
+    "angular-svg-icon": "^8.0.0",
+    "date-fns": "^2.9.0",
+    "jexl": "^2.2.2",
+    "z-schema": "^4.2.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.0",
