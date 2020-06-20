@@ -27,6 +27,13 @@ export class PlayerComponent extends ViewView implements OnInit {
         this.grange.updateContext({
             title: this.title,
             rank: this.rank,
+        }).onComplete.subscribe(success => {
+            if (success) {
+                this.grange.ui.toaster.open('Saved', 2000);
+                this.grange.traverser.traverse('..');
+            } else {
+                this.grange.ui.toaster.open('Error when saving.', 'common.dismiss');
+            }
         });
     }
 
