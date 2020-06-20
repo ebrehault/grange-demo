@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Resource } from '@guillotinaweb/grange-core';
 import { ViewView } from '@guillotinaweb/grange';
 import { map } from 'rxjs/operators';
+import { MovePlayerComponent } from '../move-player/move-player.component';
 
 interface Player extends Resource {
     rank: number;
@@ -41,6 +42,14 @@ export class PlayerComponent extends ViewView implements OnInit {
         this.grange.deleteContext().onComplete.subscribe(success => {
             if (success) {
                 this.grange.traverser.traverse('..');
+            }
+        });
+    }
+
+    openDialog() {
+        this.grange.ui.dialog.openDialog(MovePlayerComponent).onClose.subscribe(teamPath => {
+            if (!!teamPath) {
+                this.grange.traverser.traverse(teamPath);
             }
         });
     }
