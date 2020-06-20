@@ -1,4 +1,5 @@
 <h2>{{ (context | async).title }}</h2>
+<pa-button traverseTo="./@@contests">View contests</pa-button>
 <pa-expand [openOnInit]="true">
     <expand-title>Players</expand-title>
     <pa-badge *ngFor="let player of (children | async)" [traverseTo]="player['@id'] + '/@@edit'">{{player.title}}</pa-badge>
