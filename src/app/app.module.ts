@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { ButtonModule, TextFieldModule, BadgeModule, ExpandModule } from '@guillotinaweb/pastanaga-angular';
 import { TeamListComponent } from './team-list/team-list.component';
 import { TeamComponent } from './team/team.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         TeamListComponent,
         TeamComponent,
+        PlayerComponent,
     ],
     imports: [
         BrowserModule,
