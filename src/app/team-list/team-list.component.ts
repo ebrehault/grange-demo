@@ -32,4 +32,10 @@ export class TeamListComponent {
             )
         );
     }
+
+    delete(path: string) {
+        this.grange.core.resource.delete(path).pipe(
+            concatMap(() => this.loadTeams()),
+        ).subscribe(teams => this.teams = teams);
+    }
 }

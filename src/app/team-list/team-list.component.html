@@ -2,6 +2,7 @@
 <ul>
     <li *ngFor="let team of teams">
         <a href="#" [traverseTo]="team['@id']">{{ team.title }}</a>
+        <pa-button size="small" icon="delete" (click)="delete(team['@id'])">Delete</pa-button>
     </li>
 </ul>
 <pa-input [(value)]="newTeam">Team name</pa-input>
