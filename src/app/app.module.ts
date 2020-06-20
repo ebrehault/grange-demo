@@ -5,13 +5,15 @@ import { TraversalModule } from 'angular-traversal';
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { ButtonModule, TextFieldModule } from '@guillotinaweb/pastanaga-angular';
+import { ButtonModule, TextFieldModule, BadgeModule } from '@guillotinaweb/pastanaga-angular';
 import { TeamListComponent } from './team-list/team-list.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         TeamListComponent,
+        TeamComponent,
     ],
     imports: [
         BrowserModule,
@@ -20,6 +22,7 @@ import { TeamListComponent } from './team-list/team-list.component';
         TraversalModule,
         ButtonModule,
         TextFieldModule,
+        BadgeModule,
     ],
     providers: [
         {
