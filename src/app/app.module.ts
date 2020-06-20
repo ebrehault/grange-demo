@@ -5,11 +5,13 @@ import { TraversalModule } from 'angular-traversal';
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { ButtonModule } from '@guillotinaweb/pastanaga-angular';
+import { ButtonModule, TextFieldModule } from '@guillotinaweb/pastanaga-angular';
+import { TeamListComponent } from './team-list/team-list.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        TeamListComponent,
     ],
     imports: [
         BrowserModule,
@@ -17,12 +19,13 @@ import { ButtonModule } from '@guillotinaweb/pastanaga-angular';
         StoreModule.forRoot({}),
         TraversalModule,
         ButtonModule,
+        TextFieldModule,
     ],
     providers: [
         {
             provide: 'CONFIGURATION',
             useValue: {
-                BACKEND_URL: 'http://127.0.0.1:8081/db/site',
+                BACKEND_URL: 'http://127.0.0.1:8081/db/ping-pong',
                 CLIENT_TIMEOUT: 5000,
                 LOGO: 'assets/logo.svg',
             },
